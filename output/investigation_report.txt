@@ -1,0 +1,41 @@
+======================================================================
+AI-ASSISTED OSINT INVESTIGATION REPORT
+======================================================================
+
+Company: Example Technologies
+Domain: example.com
+Generated: 2026-10-06 00:11:00
+
+
+1. INVESTIGATION SUMMARY
+----------------------------------------
+The investigation correlates publicly available OSINT findings related to the organization and associated job posting.
+
+
+2. OSINT OBSERVATIONS
+----------------------------------------
+- The domain appears to have been registered recently.
+- Public verification of John Doe is incomplete.
+
+
+3. RISK ASSESSMENT
+----------------------------------------
+Risk Score: 35/100
+Risk Level: MEDIUM
+
+
+4. RED FLAGS
+----------------------------------------
+- Domain appears to have been registered recently.
+- Recruiter identity could not be independently verified.
+
+
+5. INVESTIGATION GRAPH
+----------------------------------------
+Nodes identified: 8
+Relationships identified: 7
+
+
+6. CONCLUSION
+----------------------------------------
+The identified indicators should be treated as leads for further investigation rather than definitive evidence of fraud or criminal activity.

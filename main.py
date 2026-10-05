@@ -1,5 +1,5 @@
 import json
-
+from reports.report_generator import generate_report
 from ai.ai_analyzer import analyze_findings
 from ai.risk_scoring import calculate_risk
 from graph.investigation_graph import build_graph
@@ -66,6 +66,13 @@ def main():
     print("Edges:", graph.number_of_edges())
 
     print("\nInvestigation completed.")
+    generate_report(
+        data,
+        observations,
+        risk,
+        graph
+    )
+
 
     print("\nNOTE:")
     print(

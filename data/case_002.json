@@ -1,0 +1,85 @@
+{
+  "case_id": "case_002",
+  "investigation_type": "Fake Job Recruitment / Government Impersonation OSINT",
+  "case_period": "2025",
+
+  "company": {
+    "claimed_name": "National Rural Development & Recreation Mission (NRDRM)",
+    "domains": [
+      "nrdrm.com",
+      "nrdrmvacancy.com"
+    ],
+    "status": "Unauthorized recruitment operation",
+    "verification": "The Ministry of Rural Development stated that NRDRM does not work under its purview and that the recruitment activities had no government endorsement."
+  },
+
+  "job_posting": {
+    "organization_claimed": "National Rural Development & Recreation Mission",
+    "job_type": "Recruitment for various posts",
+    "application_method": "Online application through NRDRM websites",
+    "posting_status": "Fraudulent / unauthorized",
+    "evidence": [
+      "01_mord_nrdrm_warning_2025.png",
+      "02_nrdrm_government_action_2025.png"
+    ]
+  },
+
+  "government_verification": {
+    "mord_warning": {
+      "organization": "Ministry of Rural Development",
+      "notice_date": "17.02.2025",
+      "finding": "The Ministry stated that NRDRM does not work under its purview and that its recruitment activities in the Ministry's name had no government endorsement.",
+      "domains_identified": [
+        "nrdrm.com",
+        "nrdrmvacancy.com"
+      ],
+      "additional_warning": "The Ministry stated that it does not charge any fee at any stage of its recruitment process.",
+      "source": "Official PIB / Ministry of Rural Development warning",
+      "evidence": "01_mord_nrdrm_warning_2025.png"
+    },
+
+    "government_action": {
+      "organization": "Department of Rural Development",
+      "notice_date": "04.04.2025",
+      "finding": "The Department reported a fake NRDRM website impersonating Department content and stated that I4C was requested to take down the fraudulent websites.",
+      "actions": [
+        "I4C requested to take down fraudulent NRDRM websites",
+        "Related NRDRM websites removed from the Internet",
+        "Public disclaimer issued",
+        "Public warning issued",
+        "FIR lodged"
+      ],
+      "source": "Official PIB / Ministry of Rural Development follow-up",
+      "evidence": "02_nrdrm_government_action_2025.png"
+    }
+  },
+
+  "official_verification": {
+    "organization": "Ministry of Rural Development",
+    "official_domain": "rural.gov.in",
+    "purpose": "Legitimate government reference for comparison",
+    "evidence": "03_official_mord_website.png"
+  },
+
+  "red_flags": [
+    "False association with the Ministry of Rural Development",
+    "Unauthorized recruitment activity",
+    "Use of websites associated with the fraudulent recruitment operation",
+    "Government impersonation",
+    "Recruitment conducted without government endorsement",
+    "Potential recruitment fee risk",
+    "Government enforcement action including website takedown and FIR"
+  ],
+
+  "assessment": {
+    "risk_indicator": "High",
+    "conclusion": "Official Government of India sources strongly indicate that the NRDRM recruitment operation was unauthorized and falsely associated with the Ministry of Rural Development.",
+    "limitation": "This OSINT investigation identifies indicators based on publicly available evidence and does not independently establish criminal liability."
+  },
+
+  "evidence_files": [
+    "01_mord_nrdrm_warning_2025.png",
+    "02_nrdrm_government_action_2025.png",
+    "03_official_mord_website.png"
+  ]
+}

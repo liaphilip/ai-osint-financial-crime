@@ -1,4 +1,5 @@
 import json
+from ai.llm_analyzer import analyze_with_llm
 from reports.report_generator import generate_report
 from ai.ai_analyzer import analyze_findings
 from ai.risk_scoring import calculate_risk
@@ -32,6 +33,12 @@ def main():
             print("•", observation)
     else:
         print("No major inconsistencies detected.")
+    llm_analysis = analyze_with_llm(data, observations)
+
+    if llm_analysis:
+        print("\n[1.5] LLM-ASSISTED ANALYSIS")
+        print("-" * 30)
+        print(llm_analysis)
 
     # -------------------------
     # Risk scoring

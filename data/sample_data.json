@@ -1,0 +1,48 @@
+{
+  "company": {
+    "name": "Example Technologies",
+    "domain": "example.com"
+  },
+  "job_posting": {
+    "title": "Cyber Security Intern",
+    "url": "https://example.com/careers"
+  },
+  "domains": [
+    {
+      "domain": "example.com",
+      "source": "RDAP",
+      "finding": "Domain registered recently"
+    }
+  ],
+  "emails": [
+    {
+      "email": "recruiter@example.com",
+      "source": "Job Posting"
+    }
+  ],
+  "phones": [],
+  "people": [
+    {
+      "name": "John Doe",
+      "role": "Recruiter"
+    }
+  ],
+  "social_accounts": [
+    {
+      "platform": "LinkedIn",
+      "username": "johndoe"
+    }
+  ],
+  "ips": [
+    {
+      "ip": "192.0.2.10",
+      "source": "DNS"
+    }
+  ],
+  "subdomains": [
+    {
+      "subdomain": "mail.example.com",
+      "source": "DNS"
+    }
+  ]
+}

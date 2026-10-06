@@ -1,0 +1,20 @@
+{
+  "A": [
+    "164.100.11.195"
+  ],
+  "AAAA": [],
+  "MX": [],
+  "NS": [
+    "ns1.nic.in.",
+    "ns10.nic.in.",
+    "ns7.nic.in.",
+    "ns2.nic.in."
+  ],
+  "TXT": [
+    "v=spf1 -all",
+    "B566BC92A3004B1F300B45E3B82ED872"
+  ],
+  "_dmarc": [
+    "v=DMARC1; p=reject;"
+  ]
+}

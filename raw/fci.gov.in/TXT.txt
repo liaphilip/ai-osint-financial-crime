@@ -1,0 +1,4 @@
+"DEC9AAAEE11FDDB37C70088A0F58892E"
+"v=spf1 include:mgovcloud.in include:spf.mailcloud.in mx ip4:164.100.14.0/24 ip4:164.100.2.0/24 ip4:164.100.10.0/24 ip4:164.100.15.0/24 ip4:164.100.172.0/24 ip4:164.100.13.0/24 -all"
+"0D36C4F754E41A9622E7594FCF40FD30"
+"zoho-verification=zb18878874.zmverify.mgovcloud.in"

@@ -1,0 +1,1 @@
+"v=DMARC1; p=quarantine; fo=1; rua=mailto:pmaster-wlist@fci.gov.in; ruf=mailto:pmaster-wlist@fci.gov.in"

@@ -1,0 +1,51 @@
+{
+  "case_id": "case_002",
+  "role": "official_baseline",
+  "compared_to": null,
+  "domain": "rural.gov.in",
+  "registered": "2023-12-21",
+  "registrar": "National Informatics Centre",
+  "registrant": "REDACTED FOR PRIVACY",
+  "nameservers": [
+    "ns1.nic.in",
+    "ns10.nic.in",
+    "ns2.nic.in",
+    "ns7.nic.in"
+  ],
+  "a_records": [
+    "164.100.11.195"
+  ],
+  "aaaa_records": [],
+  "mx": [],
+  "spf": "v=spf1 -all",
+  "dmarc": "v=DMARC1; p=reject;",
+  "subdomains": [],
+  "cert_issuer": null,
+  "cert_issued": null,
+  "cert_names": [],
+  "hosting": {
+    "provider": "AS4758 National Informatics Centre",
+    "country": "IN"
+  },
+  "related_domains": [],
+  "wayback_history": "First snapshot 2024-01-08, last snapshot 2026-06-12",
+  "urlscan": null,
+  "virustotal": null,
+  "currently_resolving": true,
+  "registration_note": null,
+  "red_flags": [],
+  "sources": [
+    "whois rural.gov.in (raw/rural.gov.in/whois.txt)",
+    "https://rdap.org/domain/rural.gov.in",
+    "dig rural.gov.in A/AAAA/MX/NS/TXT and _dmarc.rural.gov.in (raw/rural.gov.in/dns.json)",
+    "https://crt.sh/?q=%25.rural.gov.in",
+    "https://ipinfo.io/164.100.11.195/json",
+    "http://web.archive.org/cdx/search/cdx?url=rural.gov.in"
+  ],
+  "manual_todo": [
+    "related_domains (ViewDNS reverse IP)",
+    "urlscan",
+    "virustotal"
+  ],
+  "cert_note": "crt.sh unavailable on 2026-10-06; not collected"
+}

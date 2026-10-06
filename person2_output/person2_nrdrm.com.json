@@ -1,0 +1,70 @@
+{
+  "case_id": "case_002",
+  "role": "suspicious",
+  "compared_to": "rural.gov.in",
+  "domain": "nrdrm.com",
+  "registered": "2025-01-10",
+  "registrar": "GoDaddy.com, LLC",
+  "registrant": "Registration Private",
+  "nameservers": [
+    "glen.ns.cloudflare.com",
+    "rita.ns.cloudflare.com"
+  ],
+  "a_records": [
+    "104.21.27.208",
+    "172.67.143.151"
+  ],
+  "aaaa_records": [
+    "2606:4700:3035::ac43:8f97",
+    "2606:4700:3036::6815:1bd0"
+  ],
+  "mx": [],
+  "spf": null,
+  "dmarc": null,
+  "subdomains": [
+    "www.nrdrm.com"
+  ],
+  "cert_issuer": null,
+  "cert_issued": "2026-07-16",
+  "cert_names": [
+    "nrdrm.com",
+    "www.nrdrm.com",
+    "*.nrdrm.com"
+  ],
+  "hosting": {
+    "provider": "Cloudflare (proxy/CDN)",
+    "country": null
+  },
+  "related_domains": [
+    "nrdrmvacancy.com"
+  ],
+  "wayback_history": "First snapshot 2025-01-10, last snapshot 2026-06-19",
+  "urlscan": null,
+  "virustotal": null,
+  "currently_resolving": true,
+  "registration_note": "Created 2025-01-10; registry shows expiry 2027-01-10 (renewed/extended) and last update 2026-03-20, so the domain appears continuously registered since before the 17.02.2025 notice.",
+  "red_flags": [
+    "Domain does not use .gov.in; the official body uses rural.gov.in",
+    "Registered 2025-01-10, 38 days before the official notice dated 2025-02-17"
+  ],
+  "sources": [
+    "whois nrdrm.com (raw/nrdrm.com/whois.txt)",
+    "https://rdap.org/domain/nrdrm.com",
+    "dig nrdrm.com A/AAAA/MX/NS/TXT and _dmarc.nrdrm.com (raw/nrdrm.com/dns.json)",
+    "https://crt.sh/?q=%25.nrdrm.com",
+    "https://ipinfo.io/104.21.27.208/json",
+    "http://web.archive.org/cdx/search/cdx?url=nrdrm.com",
+    "https://api.certspotter.com/v1/issuances?domain=nrdrm.com (raw/nrdrm.com/certspotter.json)",
+    "Person 1 evidence: 01_mord_nrdm_warning_2025.png, 02_nrdrm_government_action_2025.png"
+  ],
+  "manual_todo": [
+    "related_domains (ViewDNS reverse IP)",
+    "urlscan",
+    "virustotal"
+  ],
+  "hosting_note": "Cloudflare anycast IPs; origin server hidden, so IP country says nothing about real location.",
+  "resolving_note": "DNS record exists; does not show whether fake content is live. Check urlscan.io history.",
+  "related_note": "Named together with nrdrmvacancy.com in the 17.02.2025 PIB notice (high confidence). Certificates for both first appear 2026-07-16 and again around 2026-09-13, both on Cloudflare; low confidence, since nrdrm.com WHOIS was last updated 2026-03-20 and the domains have different registrars and registration histories.",
+  "wayback_note": "Wayback captured the domain 2025-01-10 to 2026-06-19, including about 16 months after the 17.02.2025 notice. Snapshots show the domain was crawled, not what it served; see screenshots.",
+  "cert_note": "Earliest certificate in Certspotter is 2026-07-16; none found for 2025 although the 17.02.2025 PIB notice describes the site as active. Gap may reflect plain HTTP or incomplete data; not conclusive."
+}

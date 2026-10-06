@@ -1,0 +1,3 @@
+20 mx2.mgovcloud.in.
+10 mx.mgovcloud.in.
+50 mx3.mgovcloud.in.

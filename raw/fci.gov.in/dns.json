@@ -1,0 +1,26 @@
+{
+  "A": [
+    "164.100.211.226"
+  ],
+  "AAAA": [],
+  "MX": [
+    "10 mx.mgovcloud.in.",
+    "50 mx3.mgovcloud.in.",
+    "20 mx2.mgovcloud.in."
+  ],
+  "NS": [
+    "ns10.nic.in.",
+    "ns1.nic.in.",
+    "ns2.nic.in.",
+    "ns7.nic.in."
+  ],
+  "TXT": [
+    "zoho-verification=zb18878874.zmverify.mgovcloud.in",
+    "v=spf1 include:mgovcloud.in include:spf.mailcloud.in mx ip4:164.100.14.0/24 ip4:164.100.2.0/24 ip4:164.100.10.0/24 ip4:164.100.15.0/24 ip4:164.100.172.0/24 ip4:164.100.13.0/24 -all",
+    "0D36C4F754E41A9622E7594FCF40FD30",
+    "DEC9AAAEE11FDDB37C70088A0F58892E"
+  ],
+  "_dmarc": [
+    "v=DMARC1; p=quarantine; fo=1; rua=mailto:pmaster-wlist@fci.gov.in; ruf=mailto:pmaster-wlist@fci.gov.in"
+  ]
+}

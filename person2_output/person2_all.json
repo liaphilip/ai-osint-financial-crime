@@ -1,0 +1,287 @@
+[
+  {
+    "case_id": "case_001",
+    "role": "official_baseline",
+    "compared_to": null,
+    "domain": "fci.gov.in",
+    "registered": "2015-01-27",
+    "registrar": "National Informatics Centre",
+    "registrant": "REDACTED FOR PRIVACY",
+    "nameservers": [
+      "ns1.nic.in",
+      "ns10.nic.in",
+      "ns2.nic.in",
+      "ns7.nic.in"
+    ],
+    "a_records": [
+      "164.100.211.226"
+    ],
+    "aaaa_records": [],
+    "mx": [
+      "10 mx.mgovcloud.in.",
+      "50 mx3.mgovcloud.in.",
+      "20 mx2.mgovcloud.in."
+    ],
+    "spf": "v=spf1 include:mgovcloud.in include:spf.mailcloud.in mx ip4:164.100.14.0/24 ip4:164.100.2.0/24 ip4:164.100.10.0/24 ip4:164.100.15.0/24 ip4:164.100.172.0/24 ip4:164.100.13.0/24 -all",
+    "dmarc": "v=DMARC1; p=quarantine; fo=1; rua=mailto:pmaster-wlist@fci.gov.in; ruf=mailto:pmaster-wlist@fci.gov.in",
+    "subdomains": [],
+    "cert_issuer": null,
+    "cert_issued": null,
+    "cert_names": [],
+    "hosting": {
+      "provider": "AS4758 National Informatics Centre",
+      "country": "IN"
+    },
+    "related_domains": [],
+    "wayback_history": "First snapshot 2015-06-28, last snapshot 2026-09-23",
+    "urlscan": null,
+    "virustotal": null,
+    "currently_resolving": true,
+    "registration_note": null,
+    "red_flags": [],
+    "sources": [
+      "whois fci.gov.in (raw/fci.gov.in/whois.txt)",
+      "https://rdap.org/domain/fci.gov.in",
+      "dig fci.gov.in A/AAAA/MX/NS/TXT and _dmarc.fci.gov.in (raw/fci.gov.in/dns.json)",
+      "https://crt.sh/?q=%25.fci.gov.in",
+      "https://ipinfo.io/164.100.211.226/json",
+      "http://web.archive.org/cdx/search/cdx?url=fci.gov.in"
+    ],
+    "manual_todo": [
+      "related_domains (ViewDNS reverse IP)",
+      "urlscan",
+      "virustotal"
+    ],
+    "cert_note": "crt.sh unavailable on 2026-10-06; not collected"
+  },
+  {
+    "case_id": "case_001",
+    "role": "suspicious",
+    "compared_to": "fci.gov.in",
+    "domain": "fpci.org.in",
+    "registered": null,
+    "registrar": null,
+    "registrant": null,
+    "nameservers": [],
+    "a_records": [],
+    "aaaa_records": [],
+    "mx": [],
+    "spf": null,
+    "dmarc": null,
+    "subdomains": [],
+    "cert_issuer": null,
+    "cert_issued": null,
+    "cert_names": [],
+    "hosting": {
+      "provider": null,
+      "country": null
+    },
+    "related_domains": [],
+    "wayback_history": "First snapshot 2023-03-19, last snapshot 2023-05-21",
+    "urlscan": null,
+    "virustotal": null,
+    "currently_resolving": false,
+    "registration_note": "WHOIS queried 2026-10-06 reports the domain is available for registration (no longer registered). Original registration date cannot be recovered from current WHOIS.",
+    "red_flags": [
+      "Domain does not use .gov.in; the official body uses fci.gov.in",
+      "Domain does not currently resolve (consistent with takedown, not conclusive)"
+    ],
+    "sources": [
+      "whois fpci.org.in (raw/fpci.org.in/whois.txt)",
+      "https://rdap.org/domain/fpci.org.in",
+      "dig fpci.org.in A/AAAA/MX/NS/TXT and _dmarc.fpci.org.in (raw/fpci.org.in/dns.json)",
+      "https://crt.sh/?q=%25.fpci.org.in",
+      "http://web.archive.org/cdx/search/cdx?url=fpci.org.in",
+      "https://api.certspotter.com/v1/issuances?domain=fpci.org.in (raw/fpci.org.in/certspotter.json)",
+      "Person 1 evidence: 01_mofpi_warning_2023.png, 02_fci_warning.png"
+    ],
+    "manual_todo": [
+      "related_domains (ViewDNS reverse IP)",
+      "urlscan",
+      "virustotal"
+    ],
+    "resolving_note": "No DNS records; domain unregistered at time of check.",
+    "wayback_note": "Wayback captured the domain 2023-03-19 to 2023-05-21: active about 2 months before the MoFPI notice (16.05.2023) and 5 days after it. Snapshots show the domain was crawled, not what it served; see screenshots.",
+    "cert_note": "No certificates found in Certspotter on 2026-10-06 (empty result). Domain is currently unregistered, so older records may be missing; not conclusive."
+  },
+  {
+    "case_id": "case_002",
+    "role": "suspicious",
+    "compared_to": "rural.gov.in",
+    "domain": "nrdrm.com",
+    "registered": "2025-01-10",
+    "registrar": "GoDaddy.com, LLC",
+    "registrant": "Registration Private",
+    "nameservers": [
+      "glen.ns.cloudflare.com",
+      "rita.ns.cloudflare.com"
+    ],
+    "a_records": [
+      "104.21.27.208",
+      "172.67.143.151"
+    ],
+    "aaaa_records": [
+      "2606:4700:3035::ac43:8f97",
+      "2606:4700:3036::6815:1bd0"
+    ],
+    "mx": [],
+    "spf": null,
+    "dmarc": null,
+    "subdomains": [
+      "www.nrdrm.com"
+    ],
+    "cert_issuer": null,
+    "cert_issued": "2026-07-16",
+    "cert_names": [
+      "nrdrm.com",
+      "www.nrdrm.com",
+      "*.nrdrm.com"
+    ],
+    "hosting": {
+      "provider": "Cloudflare (proxy/CDN)",
+      "country": null
+    },
+    "related_domains": [
+      "nrdrmvacancy.com"
+    ],
+    "wayback_history": "First snapshot 2025-01-10, last snapshot 2026-06-19",
+    "urlscan": null,
+    "virustotal": null,
+    "currently_resolving": true,
+    "registration_note": "Created 2025-01-10; registry shows expiry 2027-01-10 (renewed/extended) and last update 2026-03-20, so the domain appears continuously registered since before the 17.02.2025 notice.",
+    "red_flags": [
+      "Domain does not use .gov.in; the official body uses rural.gov.in",
+      "Registered 2025-01-10, 38 days before the official notice dated 2025-02-17"
+    ],
+    "sources": [
+      "whois nrdrm.com (raw/nrdrm.com/whois.txt)",
+      "https://rdap.org/domain/nrdrm.com",
+      "dig nrdrm.com A/AAAA/MX/NS/TXT and _dmarc.nrdrm.com (raw/nrdrm.com/dns.json)",
+      "https://crt.sh/?q=%25.nrdrm.com",
+      "https://ipinfo.io/104.21.27.208/json",
+      "http://web.archive.org/cdx/search/cdx?url=nrdrm.com",
+      "https://api.certspotter.com/v1/issuances?domain=nrdrm.com (raw/nrdrm.com/certspotter.json)",
+      "Person 1 evidence: 01_mord_nrdm_warning_2025.png, 02_nrdrm_government_action_2025.png"
+    ],
+    "manual_todo": [
+      "related_domains (ViewDNS reverse IP)",
+      "urlscan",
+      "virustotal"
+    ],
+    "hosting_note": "Cloudflare anycast IPs; origin server hidden, so IP country says nothing about real location.",
+    "resolving_note": "DNS record exists; does not show whether fake content is live. Check urlscan.io history.",
+    "related_note": "Named together with nrdrmvacancy.com in the 17.02.2025 PIB notice (high confidence). Certificates for both first appear 2026-07-16 and again around 2026-09-13, both on Cloudflare; low confidence, since nrdrm.com WHOIS was last updated 2026-03-20 and the domains have different registrars and registration histories.",
+    "wayback_note": "Wayback captured the domain 2025-01-10 to 2026-06-19, including about 16 months after the 17.02.2025 notice. Snapshots show the domain was crawled, not what it served; see screenshots.",
+    "cert_note": "Earliest certificate in Certspotter is 2026-07-16; none found for 2025 although the 17.02.2025 PIB notice describes the site as active. Gap may reflect plain HTTP or incomplete data; not conclusive."
+  },
+  {
+    "case_id": "case_002",
+    "role": "suspicious",
+    "compared_to": "rural.gov.in",
+    "domain": "nrdrmvacancy.com",
+    "registered": "2026-07-07",
+    "registrar": "Spaceship, Inc.",
+    "registrant": null,
+    "nameservers": [
+      "matias.ns.cloudflare.com",
+      "rayne.ns.cloudflare.com"
+    ],
+    "a_records": [],
+    "aaaa_records": [],
+    "mx": [],
+    "spf": null,
+    "dmarc": null,
+    "subdomains": [],
+    "cert_issuer": null,
+    "cert_issued": "2026-07-16",
+    "cert_names": [
+      "nrdrmvacancy.com",
+      "*.nrdrmvacancy.com"
+    ],
+    "hosting": {
+      "provider": null,
+      "country": null
+    },
+    "related_domains": [
+      "nrdrm.com"
+    ],
+    "wayback_history": "First snapshot 2025-01-21, last snapshot 2026-03-13",
+    "urlscan": null,
+    "virustotal": null,
+    "currently_resolving": false,
+    "registration_note": "WHOIS creation 2026-07-07 is a re-registration: Wayback shows the domain existed 2025-01-21 to 2026-03-13, so the original registration lapsed in between. Current registrant unknown; the 2026 date is not the scam-period date.",
+    "red_flags": [
+      "Domain does not use .gov.in; the official body uses rural.gov.in",
+      "Domain does not currently resolve (consistent with takedown, not conclusive)"
+    ],
+    "sources": [
+      "whois nrdrmvacancy.com (raw/nrdrmvacancy.com/whois.txt)",
+      "https://rdap.org/domain/nrdrmvacancy.com",
+      "dig nrdrmvacancy.com A/AAAA/MX/NS/TXT and _dmarc.nrdrmvacancy.com (raw/nrdrmvacancy.com/dns.json)",
+      "https://crt.sh/?q=%25.nrdrmvacancy.com",
+      "http://web.archive.org/cdx/search/cdx?url=nrdrmvacancy.com",
+      "https://api.certspotter.com/v1/issuances?domain=nrdrmvacancy.com (raw/nrdrmvacancy.com/certspotter.json)",
+      "Person 1 evidence: 01_mord_nrdm_warning_2025.png, 02_nrdrm_government_action_2025.png"
+    ],
+    "manual_todo": [
+      "related_domains (ViewDNS reverse IP)",
+      "urlscan",
+      "virustotal"
+    ],
+    "resolving_note": "No A/AAAA records at time of check (Cloudflare nameservers set).",
+    "related_note": "Named together with nrdrm.com in the 17.02.2025 PIB notice (high confidence). Certificates for both first appear 2026-07-16 and again around 2026-09-13, both on Cloudflare; low confidence, since the domains have different registrars and registration histories.",
+    "wayback_note": "Wayback captured the domain 2025-01-21 to 2026-03-13, before the 2026-07-07 WHOIS creation date.",
+    "cert_note": "Earliest certificate in Certspotter is 2026-07-16, consistent with the 2026-07-07 re-registration. Wildcard names only; no named subdomains."
+  },
+  {
+    "case_id": "case_002",
+    "role": "official_baseline",
+    "compared_to": null,
+    "domain": "rural.gov.in",
+    "registered": "2023-12-21",
+    "registrar": "National Informatics Centre",
+    "registrant": "REDACTED FOR PRIVACY",
+    "nameservers": [
+      "ns1.nic.in",
+      "ns10.nic.in",
+      "ns2.nic.in",
+      "ns7.nic.in"
+    ],
+    "a_records": [
+      "164.100.11.195"
+    ],
+    "aaaa_records": [],
+    "mx": [],
+    "spf": "v=spf1 -all",
+    "dmarc": "v=DMARC1; p=reject;",
+    "subdomains": [],
+    "cert_issuer": null,
+    "cert_issued": null,
+    "cert_names": [],
+    "hosting": {
+      "provider": "AS4758 National Informatics Centre",
+      "country": "IN"
+    },
+    "related_domains": [],
+    "wayback_history": "First snapshot 2024-01-08, last snapshot 2026-06-12",
+    "urlscan": null,
+    "virustotal": null,
+    "currently_resolving": true,
+    "registration_note": null,
+    "red_flags": [],
+    "sources": [
+      "whois rural.gov.in (raw/rural.gov.in/whois.txt)",
+      "https://rdap.org/domain/rural.gov.in",
+      "dig rural.gov.in A/AAAA/MX/NS/TXT and _dmarc.rural.gov.in (raw/rural.gov.in/dns.json)",
+      "https://crt.sh/?q=%25.rural.gov.in",
+      "https://ipinfo.io/164.100.11.195/json",
+      "http://web.archive.org/cdx/search/cdx?url=rural.gov.in"
+    ],
+    "manual_todo": [
+      "related_domains (ViewDNS reverse IP)",
+      "urlscan",
+      "virustotal"
+    ],
+    "cert_note": "crt.sh unavailable on 2026-10-06; not collected"
+  }
+]

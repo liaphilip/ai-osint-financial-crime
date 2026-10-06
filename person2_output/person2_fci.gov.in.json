@@ -1,0 +1,55 @@
+{
+  "case_id": "case_001",
+  "role": "official_baseline",
+  "compared_to": null,
+  "domain": "fci.gov.in",
+  "registered": "2015-01-27",
+  "registrar": "National Informatics Centre",
+  "registrant": "REDACTED FOR PRIVACY",
+  "nameservers": [
+    "ns1.nic.in",
+    "ns10.nic.in",
+    "ns2.nic.in",
+    "ns7.nic.in"
+  ],
+  "a_records": [
+    "164.100.211.226"
+  ],
+  "aaaa_records": [],
+  "mx": [
+    "10 mx.mgovcloud.in.",
+    "50 mx3.mgovcloud.in.",
+    "20 mx2.mgovcloud.in."
+  ],
+  "spf": "v=spf1 include:mgovcloud.in include:spf.mailcloud.in mx ip4:164.100.14.0/24 ip4:164.100.2.0/24 ip4:164.100.10.0/24 ip4:164.100.15.0/24 ip4:164.100.172.0/24 ip4:164.100.13.0/24 -all",
+  "dmarc": "v=DMARC1; p=quarantine; fo=1; rua=mailto:pmaster-wlist@fci.gov.in; ruf=mailto:pmaster-wlist@fci.gov.in",
+  "subdomains": [],
+  "cert_issuer": null,
+  "cert_issued": null,
+  "cert_names": [],
+  "hosting": {
+    "provider": "AS4758 National Informatics Centre",
+    "country": "IN"
+  },
+  "related_domains": [],
+  "wayback_history": "First snapshot 2015-06-28, last snapshot 2026-09-23",
+  "urlscan": null,
+  "virustotal": null,
+  "currently_resolving": true,
+  "registration_note": null,
+  "red_flags": [],
+  "sources": [
+    "whois fci.gov.in (raw/fci.gov.in/whois.txt)",
+    "https://rdap.org/domain/fci.gov.in",
+    "dig fci.gov.in A/AAAA/MX/NS/TXT and _dmarc.fci.gov.in (raw/fci.gov.in/dns.json)",
+    "https://crt.sh/?q=%25.fci.gov.in",
+    "https://ipinfo.io/164.100.211.226/json",
+    "http://web.archive.org/cdx/search/cdx?url=fci.gov.in"
+  ],
+  "manual_todo": [
+    "related_domains (ViewDNS reverse IP)",
+    "urlscan",
+    "virustotal"
+  ],
+  "cert_note": "crt.sh unavailable on 2026-10-06; not collected"
+}

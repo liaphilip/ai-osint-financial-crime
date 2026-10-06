@@ -1,0 +1,11 @@
+{
+  "A": [],
+  "AAAA": [],
+  "MX": [],
+  "NS": [
+    "matias.ns.cloudflare.com.",
+    "rayne.ns.cloudflare.com."
+  ],
+  "TXT": [],
+  "_dmarc": []
+}

@@ -1,0 +1,92 @@
+[
+	{
+		"id": "15903781915",
+		"tbs_sha256": "ea911877bafd54b632cb74bed625e059755a3c843f2b9e91353a89dd50e0cbaf",
+		"cert_sha256": "5868567d54673a962d3130705dd332a7d82dc994a03e32c1b514c7ebec8662c3",
+		"dns_names": [
+			"*.nrdrmvacancy.com",
+			"nrdrmvacancy.com"
+		],
+		"pubkey_sha256": "e6398ff65fd9627bdf5f540279733686aa9e7bee5721fc533c9057b6b3e8e63c",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-07-16T15:25:08Z",
+		"not_after": "2026-10-14T16:23:45Z",
+		"revoked": false
+	},
+	{
+		"id": "15903783801",
+		"tbs_sha256": "90b63895013e70f07b5f7a0fa20282f90417ea570a5fec2d2832c73df19eaacd",
+		"cert_sha256": "85c8c62ca1689cf9a79b7c315b80da1d5528444ad4fd17d06b7c9577b65a8097",
+		"dns_names": [
+			"*.nrdrmvacancy.com",
+			"nrdrmvacancy.com"
+		],
+		"pubkey_sha256": "6abc5cbdca618d2ba4d51c69bd21c76ae3e12a37698eaa32c40781acf4ec3741",
+		"issuer": {
+			"friendly_name": "SSL.com",
+			"pubkey_sha256": "1959e38fb7d3fc16bee5e20e834e2c6667bf0e9e6b9806b86bd40a6d66c716d0",
+			"name": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 4"
+		},
+		"not_before": "2026-07-16T16:16:02Z",
+		"not_after": "2026-10-14T16:23:50Z",
+		"revoked": false
+	},
+	{
+		"id": "17157094335",
+		"tbs_sha256": "30088c544b4d2527131df71f7e9c7706a0dd47179ceb20ad7d1faa1eb9904b2b",
+		"cert_sha256": "f4be0e4aded9442910fc48594f25cae103b67d99822eed2e4e72f69b5eded840",
+		"dns_names": [
+			"*.nrdrmvacancy.com",
+			"nrdrmvacancy.com"
+		],
+		"pubkey_sha256": "50311c9cd88893cf7c4236066cb5b89d0737d14aecf416937464931bd8a23582",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-13T15:50:54Z",
+		"not_after": "2026-12-12T16:49:38Z",
+		"revoked": false
+	},
+	{
+		"id": "17157215448",
+		"tbs_sha256": "b14d3adadad58e8468a1900db2109a0ae0ac8d213c0d61a80ee5151a200e22f7",
+		"cert_sha256": "7853966973d0270b769e22d3d1e44087fd69854e16f84a875b331f7961be734e",
+		"dns_names": [
+			"*.nrdrmvacancy.com",
+			"nrdrmvacancy.com"
+		],
+		"pubkey_sha256": "a86624fdaf586180ffb268354a3e207041f349065c9d5313d284c665b136749d",
+		"issuer": {
+			"friendly_name": "Google Trust Services",
+			"pubkey_sha256": "908769e8d34477cc2cba0632c88605b22d7294c0840f78596d247c645b1afc0e",
+			"name": "C=US, O=Google Trust Services, CN=WE1"
+		},
+		"not_before": "2026-09-13T16:01:25Z",
+		"not_after": "2026-12-12T17:01:12Z",
+		"revoked": false
+	},
+	{
+		"id": "17205941396",
+		"tbs_sha256": "22adec132807f2c1d1d2ba679d2d5f0adadcd51256995404dcf77bba964c1892",
+		"cert_sha256": "23a5bb3c3e5ab6322b00fc3e8cd572895dd0f12d302b3a1b84c2d2613067ebb5",
+		"dns_names": [
+			"*.nrdrmvacancy.com",
+			"nrdrmvacancy.com"
+		],
+		"pubkey_sha256": "4b8ac6768b785cb980caa7afcd2e223bb0567d323453763ef35b368e1f6ec7b3",
+		"issuer": {
+			"friendly_name": "SSL.com",
+			"pubkey_sha256": "1959e38fb7d3fc16bee5e20e834e2c6667bf0e9e6b9806b86bd40a6d66c716d0",
+			"name": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 4"
+		},
+		"not_before": "2026-09-16T05:41:25Z",
+		"not_after": "2026-12-12T18:09:31Z",
+		"revoked": false
+	}
+]

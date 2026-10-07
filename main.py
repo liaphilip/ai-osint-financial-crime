@@ -1,3 +1,4 @@
+from integration.person3_adapter import run_person3_osint
 from ai.ai_analyzer import analyze_findings
 from ai.risk_scoring import calculate_risk
 from ai.llm_analyzer import analyze_with_llm
@@ -45,6 +46,18 @@ def main():
         # -------------------------
 
         findings, observations = analyze_findings(data)
+
+                # -------------------------
+        # Person 3 Identity/Social OSINT
+        # -------------------------
+
+        person3_result = run_person3_osint(data)
+
+        print("\n[1.2] IDENTITY & SOCIAL OSINT")
+        print("-" * 30)
+
+        print("Status:", person3_result["status"])
+        print("Reason:", person3_result["reason"])
 
         print("\n[1] OSINT ANALYSIS")
         print("-" * 30)

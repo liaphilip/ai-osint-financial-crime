@@ -1,0 +1,13 @@
+{
+    "case_id": "JOB-OSINT-001",
+    "company": "Example Technologies",
+    "job_title": "Python Developer",
+    "job_url": "https://example.com/jobs/python-developer",
+    "website": "https://example.com",
+    "recruiter_name": "John Doe",
+    "email": "recruiter@example.com",
+    "phone": "+14155550123",
+    "username": "johndoe123",
+    "claimed_location": "Bengaluru, India",
+    "claimed_role": "Technical Recruiter"
+}

@@ -1,0 +1,53 @@
+======================================================================
+AI-ASSISTED OSINT INVESTIGATION REPORT
+======================================================================
+
+Company: National Rural Development & Recreation Mission (NRDRM)
+Domain: 
+Generated: 2026-10-07 19:12:45
+
+
+1. INVESTIGATION SUMMARY
+----------------------------------------
+The investigation correlates publicly available OSINT findings related to the organization and associated job posting.
+
+
+2. OSINT OBSERVATIONS
+----------------------------------------
+- Official government verification information was identified in the case evidence.
+- Domain nrdrm.com has a registration-related indicator requiring verification.
+- Infrastructure finding: Domain does not use .gov.in; the official body uses rural.gov.in
+- Infrastructure finding: Registered 2025-01-10, 38 days before the official notice dated 2025-02-17
+- Domain nrdrmvacancy.com has a registration-related indicator requiring verification.
+- Infrastructure finding: Domain does not use .gov.in; the official body uses rural.gov.in
+- Infrastructure finding: Domain does not currently resolve (consistent with takedown, not conclusive)
+- Case finding: False association with the Ministry of Rural Development
+- Case finding: Unauthorized recruitment activity
+- Case finding: Use of websites associated with the fraudulent recruitment operation
+- Case finding: Government impersonation
+- Case finding: Recruitment conducted without government endorsement
+- Case finding: Potential recruitment fee risk
+- Case finding: Government enforcement action including website takedown and FIR
+
+
+3. RISK ASSESSMENT
+----------------------------------------
+Risk Score: 35/100
+Risk Level: MEDIUM
+
+
+4. RED FLAGS
+----------------------------------------
+- Domain appears to have been registered recently.
+- Technical infrastructure shows inconsistencies with the claimed organization.
+
+
+5. INVESTIGATION GRAPH
+----------------------------------------
+Nodes identified: 14
+Relationships identified: 21
+
+
+6. CONCLUSION
+----------------------------------------
+The identified indicators should be treated as leads for further investigation rather than definitive evidence of fraud or criminal activity.

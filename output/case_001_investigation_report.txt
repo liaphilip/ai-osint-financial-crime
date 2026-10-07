@@ -1,0 +1,49 @@
+======================================================================
+AI-ASSISTED OSINT INVESTIGATION REPORT
+======================================================================
+
+Company: Food Processing Corporation of India
+Domain: fpci.org.in
+Generated: 2026-10-07 19:12:44
+
+
+1. INVESTIGATION SUMMARY
+----------------------------------------
+The investigation correlates publicly available OSINT findings related to the organization and associated job posting.
+
+
+2. OSINT OBSERVATIONS
+----------------------------------------
+- Official government verification information was identified in the case evidence.
+- Domain fpci.org.in has a registration-related indicator requiring verification.
+- Infrastructure finding: Domain does not use .gov.in; the official body uses fci.gov.in
+- Infrastructure finding: Domain does not currently resolve (consistent with takedown, not conclusive)
+- Case finding: Unauthorized recruitment website
+- Case finding: False association with a government-related organization
+- Case finding: Recruitment advertisement not authorized by the relevant government organization
+- Case finding: Applicants were asked to submit applications and make payment
+- Case finding: Fake website presented an online job application section
+- Case finding: Website used the name Food Processing Corporation of India
+
+
+3. RISK ASSESSMENT
+----------------------------------------
+Risk Score: 35/100
+Risk Level: MEDIUM
+
+
+4. RED FLAGS
+----------------------------------------
+- Domain appears to have been registered recently.
+- Technical infrastructure shows inconsistencies with the claimed organization.
+
+
+5. INVESTIGATION GRAPH
+----------------------------------------
+Nodes identified: 10
+Relationships identified: 10
+
+
+6. CONCLUSION
+----------------------------------------
+The identified indicators should be treated as leads for further investigation rather than definitive evidence of fraud or criminal activity.

@@ -1,0 +1,50 @@
+{
+  "case_id": "case_001",
+  "role": "suspicious",
+  "compared_to": "fci.gov.in",
+  "domain": "fpci.org.in",
+  "registered": null,
+  "registrar": null,
+  "registrant": null,
+  "nameservers": [],
+  "a_records": [],
+  "aaaa_records": [],
+  "mx": [],
+  "spf": null,
+  "dmarc": null,
+  "subdomains": [],
+  "cert_issuer": null,
+  "cert_issued": null,
+  "cert_names": [],
+  "hosting": {
+    "provider": null,
+    "country": null
+  },
+  "related_domains": [],
+  "wayback_history": "First snapshot 2023-03-19, last snapshot 2023-05-21",
+  "urlscan": null,
+  "virustotal": null,
+  "currently_resolving": false,
+  "registration_note": "WHOIS queried 2026-10-06 reports the domain is available for registration (no longer registered). Original registration date cannot be recovered from current WHOIS.",
+  "red_flags": [
+    "Domain does not use .gov.in; the official body uses fci.gov.in",
+    "Domain does not currently resolve (consistent with takedown, not conclusive)"
+  ],
+  "sources": [
+    "whois fpci.org.in (raw/fpci.org.in/whois.txt)",
+    "https://rdap.org/domain/fpci.org.in",
+    "dig fpci.org.in A/AAAA/MX/NS/TXT and _dmarc.fpci.org.in (raw/fpci.org.in/dns.json)",
+    "https://crt.sh/?q=%25.fpci.org.in",
+    "http://web.archive.org/cdx/search/cdx?url=fpci.org.in",
+    "https://api.certspotter.com/v1/issuances?domain=fpci.org.in (raw/fpci.org.in/certspotter.json)",
+    "Person 1 evidence: 01_mofpi_warning_2023.png, 02_fci_warning.png"
+  ],
+  "manual_todo": [
+    "related_domains (ViewDNS reverse IP)",
+    "urlscan",
+    "virustotal"
+  ],
+  "resolving_note": "No DNS records; domain unregistered at time of check.",
+  "wayback_note": "Wayback captured the domain 2023-03-19 to 2023-05-21: active about 2 months before the MoFPI notice (16.05.2023) and 5 days after it. Snapshots show the domain was crawled, not what it served; see screenshots.",
+  "cert_note": "No certificates found in Certspotter on 2026-10-06 (empty result). Domain is currently unregistered, so older records may be missing; not conclusive."
+}

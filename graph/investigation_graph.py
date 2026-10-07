@@ -1,148 +1,151 @@
-import json
 import networkx as nx
 import matplotlib.pyplot as plt
-
-
-def load_data():
-    with open("data/sample_data.json", "r", encoding="utf-8") as file:
-        return json.load(file)
+from pathlib import Path
 
 
 def build_graph(data):
     graph = nx.Graph()
 
-    # -------------------------
+    case_id = data.get("case_id", "unknown_case")
+
+    # Case
+    graph.add_node(case_id, type="case")
+
     # Company
-    # -------------------------
-    company = data["company"]["name"]
-    domain = data["company"]["domain"]
-
+    company = data.get("company", {}).get("name", "Unknown")
     graph.add_node(company, type="company")
-
-    # -------------------------
-    # Domain
-    # -------------------------
-    graph.add_node(domain, type="domain")
-
     graph.add_edge(
+        case_id,
         company,
-        domain,
-        relationship="owns"
+        relationship="investigates"
     )
 
-    # -------------------------
-    # Job Posting
-    # -------------------------
-    job = data["job_posting"]["title"]
+    # Domains
+    for domain in data.get("domains", []):
+        graph.add_node(domain, type="domain")
+        graph.add_edge(
+            company,
+            domain,
+            relationship="associated_with"
+        )
 
-    graph.add_node(
-        job,
-        type="job_posting"
+    # Job posting
+    job = data.get("job_posting", {}).get(
+        "title",
+        "Recruitment posting"
     )
 
+    graph.add_node(job, type="job_posting")
     graph.add_edge(
         company,
         job,
         relationship="posted"
     )
 
-    # -------------------------
-    # Email addresses
-    # -------------------------
+    # Emails
     for email in data.get("emails", []):
-
-        address = email["email"]
-
-        graph.add_node(
-            address,
-            type="email"
+        address = (
+            email.get("email")
+            if isinstance(email, dict)
+            else str(email)
         )
 
-        graph.add_edge(
-            company,
-            address,
-            relationship="uses"
-        )
+        if address:
+            graph.add_node(address, type="email")
+            graph.add_edge(
+                company,
+                address,
+                relationship="uses"
+            )
 
-    # -------------------------
     # People
-    # -------------------------
     for person in data.get("people", []):
-
-        name = person["name"]
-
-        graph.add_node(
-            name,
-            type="person"
+        name = (
+            person.get("name")
+            if isinstance(person, dict)
+            else str(person)
         )
 
-        graph.add_edge(
-            company,
-            name,
-            relationship="associated_with"
-        )
+        if name:
+            graph.add_node(name, type="person")
+            graph.add_edge(
+                company,
+                name,
+                relationship="associated_with"
+            )
 
-        # -------------------------
-        # Social accounts
-        # -------------------------
-        for account in data.get("social_accounts", []):
-
-            username = account["username"]
-            platform = account["platform"]
-
+    # Social accounts
+    for account in data.get("social_accounts", []):
+        if isinstance(account, dict):
+            username = account.get("username", "")
+            platform = account.get("platform", "")
             social_node = f"{platform}:{username}"
 
-            graph.add_node(
-                social_node,
-                type="social_account"
-            )
+            if username:
+                graph.add_node(
+                    social_node,
+                    type="social_account"
+                )
 
-            graph.add_edge(
-                name,
-                social_node,
-                relationship="has_account"
-            )
-
-    # -------------------------
     # IP addresses
-    # -------------------------
     for ip in data.get("ips", []):
+        graph.add_node(ip, type="ip")
 
-        address = ip["ip"]
+        for domain in data.get("domains", []):
+            graph.add_edge(
+                domain,
+                ip,
+                relationship="resolves_to"
+            )
 
-        graph.add_node(
-            address,
-            type="ip"
-        )
-
-        graph.add_edge(
-            domain,
-            address,
-            relationship="resolves_to"
-        )
-
-    # -------------------------
     # Subdomains
-    # -------------------------
     for subdomain in data.get("subdomains", []):
-
-        subdomain_name = subdomain["subdomain"]
-
-        graph.add_node(
-            subdomain_name,
-            type="subdomain"
+        name = (
+            subdomain.get("subdomain")
+            if isinstance(subdomain, dict)
+            else str(subdomain)
         )
 
+        if name:
+            graph.add_node(name, type="subdomain")
+
+            for domain in data.get("domains", []):
+                graph.add_edge(
+                    domain,
+                    name,
+                    relationship="has_subdomain"
+                )
+
+    # Evidence
+    for evidence in data.get("evidence", []):
+        graph.add_node(evidence, type="evidence")
         graph.add_edge(
-            domain,
-            subdomain_name,
-            relationship="has_subdomain"
+            case_id,
+            evidence,
+            relationship="supported_by"
+        )
+
+    # Government verification
+    if data.get("government_verification"):
+        verification_node = f"{case_id}:government_verification"
+        graph.add_node(
+            verification_node,
+            type="government_verification"
+        )
+        graph.add_edge(
+            case_id,
+            verification_node,
+            relationship="verified_by"
         )
 
     return graph
 
 
-def visualize_graph(graph):
+def visualize_graph(graph, output_path="output/investigation_graph.png"):
+    Path(output_path).parent.mkdir(
+        parents=True,
+        exist_ok=True
+    )
 
     plt.figure(figsize=(14, 9))
 
@@ -152,7 +155,6 @@ def visualize_graph(graph):
         k=1.5
     )
 
-    # Draw nodes and edges
     nx.draw(
         graph,
         positions,
@@ -162,7 +164,6 @@ def visualize_graph(graph):
         edge_color="gray"
     )
 
-    # Edge relationship labels
     labels = nx.get_edge_attributes(
         graph,
         "relationship"
@@ -180,35 +181,16 @@ def visualize_graph(graph):
         fontsize=16
     )
 
-    # Save graph
     plt.savefig(
-        "output/investigation_graph.png",
+        output_path,
         dpi=300,
         bbox_inches="tight"
     )
 
-    print("\nGraph saved to:")
-    print("output/investigation_graph.png")
+    plt.close()
 
-    print("\nNodes:", graph.number_of_nodes())
-    print("Edges:", graph.number_of_edges())
-
-    # Display graph
-    plt.show()
-
-
-def main():
-
-    print("=" * 50)
-    print("OSINT INVESTIGATION GRAPH")
-    print("=" * 50)
-
-    data = load_data()
-
-    graph = build_graph(data)
-
-    visualize_graph(graph)
+    return output_path
 
 
 if __name__ == "__main__":
-    main()
+    print("Graph module ready.")

@@ -1,11 +1,9 @@
-import json
-from pathlib import Path
-
-
 def analyze_findings(data):
     """
-    Analyze OSINT findings and identify potential inconsistencies.
-    This does not determine that an organization is fraudulent.
+    Analyze real OSINT findings.
+
+    This produces investigative indicators only.
+    It does not establish fraud or criminal activity.
     """
 
     findings = {
@@ -19,64 +17,83 @@ def analyze_findings(data):
 
     observations = []
 
-    # Domain analysis
-    for domain in data.get("domains", []):
-        text = domain.get("finding", "").lower()
+    # Government verification
+    verification = data.get("government_verification", {})
 
-        if "recent" in text or "new" in text:
+    if verification:
+        observations.append(
+            "Official government verification information "
+            "was identified in the case evidence."
+        )
+
+    # Infrastructure observations
+    infrastructure = data.get("infrastructure", [])
+
+    for record in infrastructure:
+
+        if record.get("registration_note"):
             findings["recent_domain"] = True
             observations.append(
-                "The domain appears to have been registered recently."
+                f"Domain {record.get('domain', 'unknown')} "
+                "has a registration-related indicator requiring verification."
             )
 
+        for flag in record.get("red_flags", []):
+            findings["infrastructure_mismatch"] = True
+            observations.append(
+                f"Infrastructure finding: {flag}"
+            )
+
+    # Explicit case red flags
+    for flag in data.get("red_flags", []):
+        observations.append(
+            f"Case finding: {flag}"
+        )
+
     # Email analysis
-    company_domain = data.get("company", {}).get("domain", "")
+    company_domain = (
+        data.get("company", {}).get("domain", "")
+    )
 
     for email in data.get("emails", []):
-        address = email.get("email", "")
+
+        if isinstance(email, dict):
+            address = email.get("email", "")
+        else:
+            address = str(email)
 
         if "@" in address and company_domain:
+
             email_domain = address.split("@")[-1]
 
             if email_domain.lower() != company_domain.lower():
+
                 findings["email_mismatch"] = True
+
                 observations.append(
-                    "A contact email does not match the organization's domain."
+                    "A contact email does not match "
+                    "the organization's domain."
                 )
 
-    # Recruiter verification
-    if data.get("people"):
-        for person in data["people"]:
-            if not person.get("verified", False):
+    # People verification
+    for person in data.get("people", []):
+
+        if isinstance(person, dict):
+
+            if not person.get("verified", True):
+
                 findings["unverified_recruiter"] = True
+
                 observations.append(
-                    f"Public verification of {person.get('name', 'the recruiter')} "
+                    f"Public verification of "
+                    f"{person.get('name', 'the associated person')} "
                     "is incomplete."
                 )
 
+    if not observations:
+        observations.append(
+            "No additional rule-based inconsistencies "
+            "were detected from the available structured data."
+        )
+
     return findings, observations
-
-
-def main():
-
-    data_path = Path("data/sample_data.json")
-
-    with open(data_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
-
-    findings, observations = analyze_findings(data)
-
-    print("\nAI-ASSISTED OSINT ANALYSIS")
-    print("=" * 35)
-
-    if observations:
-        for observation in observations:
-            print("-", observation)
-    else:
-        print("No major inconsistencies detected.")
-
-    return findings
-
-
-if __name__ == "__main__":
-    main()

@@ -1,0 +1,70 @@
+{
+  "case_id": "case_001",
+  "investigation_type": "Fake Job Recruitment / Company OSINT",
+  "case_period": "2023",
+
+  "company": {
+    "claimed_name": "Food Processing Corporation of India",
+    "domain": "fpci.org.in",
+    "status": "Unauthorized / fake recruitment website",
+    "verification": "The Ministry of Food Processing Industries and Food Corporation of India stated that the website was not authorized."
+  },
+
+  "job_posting": {
+    "website": "fpci.org.in",
+    "job_type": "Recruitment for various posts",
+    "application_deadline": "26.05.2023",
+    "application_method": "Online application through the website",
+    "payment_requested": true,
+    "posting_status": "Fake / unauthorized",
+    "evidence": [
+      "01_mofpi_warning_2023.png",
+      "02_fci_warning.png"
+    ]
+  },
+
+  "government_verification": {
+    "mofpi": {
+      "organization": "Ministry of Food Processing Industries",
+      "notice_date": "16.05.2023",
+      "finding": "MoFPI stated that it had not advertised the recruitment posts and did not have the website fpci.org.in.",
+      "source": "Official MoFPI caution notice",
+      "evidence": "01_mofpi_warning_2023.png"
+    },
+
+    "fci": {
+      "organization": "Food Corporation of India",
+      "finding": "FCI stated that fpci.org.in was a fake recruitment website and that the advertisement had no relation to FCI recruitment.",
+      "source": "Official FCI public notice on recruitment fraud",
+      "evidence": "02_fci_warning.png"
+    }
+  },
+
+  "official_verification": {
+    "organization": "Food Corporation of India",
+    "official_domain": "fci.gov.in",
+    "purpose": "Used as the legitimate FCI recruitment reference",
+    "evidence": "03_official_fci_recruitment.png"
+  },
+
+  "red_flags": [
+    "Unauthorized recruitment website",
+    "False association with a government-related organization",
+    "Recruitment advertisement not authorized by the relevant government organization",
+    "Applicants were asked to submit applications and make payment",
+    "Fake website presented an online job application section",
+    "Website used the name Food Processing Corporation of India"
+  ],
+
+  "assessment": {
+    "risk_indicator": "High",
+    "conclusion": "The available official government notices strongly indicate that fpci.org.in was an unauthorized fake recruitment website.",
+    "limitation": "This OSINT investigation identifies indicators based on publicly available evidence and does not independently establish criminal liability."
+  },
+
+  "evidence_files": [
+    "01_mofpi_warning_2023.png",
+    "02_fci_warning.png",
+    "03_official_fci_recruitment.png"
+  ]
+}

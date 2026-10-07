@@ -82,8 +82,13 @@ def generate_report(data, observations, risk, graph):
 
     Path("output").mkdir(exist_ok=True)
 
+    output_path = (
+        Path("output")
+        / f"{data['case_id']}_investigation_report.txt"
+    )
+
     with open(
-        "output/investigation_report.txt",
+        output_path,
         "w",
         encoding="utf-8"
     ) as file:
@@ -91,6 +96,7 @@ def generate_report(data, observations, risk, graph):
         file.write(output)
 
     print("\nReport generated:")
-    print("output/investigation_report.txt")
+    print(output_path)
 
     return output
+

@@ -1,0 +1,59 @@
+{
+  "case_id": "case_002",
+  "role": "suspicious",
+  "compared_to": "rural.gov.in",
+  "domain": "nrdrmvacancy.com",
+  "registered": "2026-07-07",
+  "registrar": "Spaceship, Inc.",
+  "registrant": null,
+  "nameservers": [
+    "matias.ns.cloudflare.com",
+    "rayne.ns.cloudflare.com"
+  ],
+  "a_records": [],
+  "aaaa_records": [],
+  "mx": [],
+  "spf": null,
+  "dmarc": null,
+  "subdomains": [],
+  "cert_issuer": null,
+  "cert_issued": "2026-07-16",
+  "cert_names": [
+    "nrdrmvacancy.com",
+    "*.nrdrmvacancy.com"
+  ],
+  "hosting": {
+    "provider": null,
+    "country": null
+  },
+  "related_domains": [
+    "nrdrm.com"
+  ],
+  "wayback_history": "First snapshot 2025-01-21, last snapshot 2026-03-13",
+  "urlscan": null,
+  "virustotal": null,
+  "currently_resolving": false,
+  "registration_note": "WHOIS creation 2026-07-07 is a re-registration: Wayback shows the domain existed 2025-01-21 to 2026-03-13, so the original registration lapsed in between. Current registrant unknown; the 2026 date is not the scam-period date.",
+  "red_flags": [
+    "Domain does not use .gov.in; the official body uses rural.gov.in",
+    "Domain does not currently resolve (consistent with takedown, not conclusive)"
+  ],
+  "sources": [
+    "whois nrdrmvacancy.com (raw/nrdrmvacancy.com/whois.txt)",
+    "https://rdap.org/domain/nrdrmvacancy.com",
+    "dig nrdrmvacancy.com A/AAAA/MX/NS/TXT and _dmarc.nrdrmvacancy.com (raw/nrdrmvacancy.com/dns.json)",
+    "https://crt.sh/?q=%25.nrdrmvacancy.com",
+    "http://web.archive.org/cdx/search/cdx?url=nrdrmvacancy.com",
+    "https://api.certspotter.com/v1/issuances?domain=nrdrmvacancy.com (raw/nrdrmvacancy.com/certspotter.json)",
+    "Person 1 evidence: 01_mord_nrdm_warning_2025.png, 02_nrdrm_government_action_2025.png"
+  ],
+  "manual_todo": [
+    "related_domains (ViewDNS reverse IP)",
+    "urlscan",
+    "virustotal"
+  ],
+  "resolving_note": "No A/AAAA records at time of check (Cloudflare nameservers set).",
+  "related_note": "Named together with nrdrm.com in the 17.02.2025 PIB notice (high confidence). Certificates for both first appear 2026-07-16 and again around 2026-09-13, both on Cloudflare; low confidence, since the domains have different registrars and registration histories.",
+  "wayback_note": "Wayback captured the domain 2025-01-21 to 2026-03-13, before the 2026-07-07 WHOIS creation date.",
+  "cert_note": "Earliest certificate in Certspotter is 2026-07-16, consistent with the 2026-07-07 re-registration. Wildcard names only; no named subdomains."
+}

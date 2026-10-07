@@ -1,9 +1,12 @@
-import json
-from ai.llm_analyzer import analyze_with_llm
-from reports.report_generator import generate_report
 from ai.ai_analyzer import analyze_findings
 from ai.risk_scoring import calculate_risk
-from graph.investigation_graph import build_graph
+from ai.llm_analyzer import analyze_with_llm
+from graph.investigation_graph import (
+    build_graph,
+    visualize_graph
+)
+from integration.data_loader import load_investigation_cases
+from reports.report_generator import generate_report
 
 
 def main():
@@ -12,79 +15,143 @@ def main():
     print("AI-ASSISTED OSINT FINANCIAL CRIME INVESTIGATION")
     print("=" * 60)
 
-    # Load OSINT data
-    with open("data/sample_data.json", "r", encoding="utf-8") as file:
-        data = json.load(file)
+    cases = load_investigation_cases()
 
-    company = data["company"]["name"]
+    if not cases:
+        print("No investigation cases found.")
+        return
 
-    print(f"\nInvestigating: {company}")
+    print(f"\nCases loaded: {len(cases)}")
 
-    # -------------------------
-    # AI-assisted analysis
-    # -------------------------
-    findings, observations = analyze_findings(data)
+    for data in cases:
 
-    print("\n[1] OSINT ANALYSIS")
-    print("-" * 30)
+        case_id = data.get("case_id", "unknown")
 
-    if observations:
+        company = data.get(
+            "company",
+            {}
+        ).get(
+            "name",
+            "Unknown"
+        )
+
+        print("\n" + "=" * 60)
+        print(f"CASE: {case_id}")
+        print(f"Investigating: {company}")
+        print("=" * 60)
+
+        # -------------------------
+        # AI-assisted analysis
+        # -------------------------
+
+        findings, observations = analyze_findings(data)
+
+        print("\n[1] OSINT ANALYSIS")
+        print("-" * 30)
+
         for observation in observations:
             print("•", observation)
-    else:
-        print("No major inconsistencies detected.")
-    llm_analysis = analyze_with_llm(data, observations)
 
-    if llm_analysis:
-        print("\n[1.5] LLM-ASSISTED ANALYSIS")
+        # Optional LLM.
+        # If unavailable, rule-based analysis continues.
+        llm_analysis = analyze_with_llm(
+            data,
+            observations
+        )
+
+        if llm_analysis:
+
+            print("\n[1.5] LLM-ASSISTED ANALYSIS")
+            print("-" * 30)
+            print(llm_analysis)
+
+        # -------------------------
+        # Risk scoring
+        # -------------------------
+
+        risk = calculate_risk(findings)
+
+        print("\n[2] RISK ASSESSMENT")
         print("-" * 30)
-        print(llm_analysis)
 
-    # -------------------------
-    # Risk scoring
-    # -------------------------
-    risk = calculate_risk(findings)
+        print(
+            "Risk Score:",
+            risk["risk_score"],
+            "/ 100"
+        )
 
-    print("\n[2] RISK ASSESSMENT")
-    print("-" * 30)
-    print("Risk Score :", risk["risk_score"], "/ 100")
-    print("Risk Level :", risk["risk_level"])
+        print(
+            "Risk Level:",
+            risk["risk_level"]
+        )
 
-    # -------------------------
-    # Red flags
-    # -------------------------
-    print("\n[3] RED FLAGS")
-    print("-" * 30)
+        # -------------------------
+        # Red flags
+        # -------------------------
 
-    if risk["red_flags"]:
-        for flag in risk["red_flags"]:
-            print("⚠", flag)
-    else:
-        print("No red flags detected.")
+        print("\n[3] RED FLAGS")
+        print("-" * 30)
 
-    # -------------------------
-    # Investigation graph
-    # -------------------------
-    graph = build_graph(data)
+        if risk["red_flags"]:
 
-    print("\n[4] INVESTIGATION GRAPH")
-    print("-" * 30)
-    print("Nodes:", graph.number_of_nodes())
-    print("Edges:", graph.number_of_edges())
+            for flag in risk["red_flags"]:
+                print("⚠", flag)
 
-    print("\nInvestigation completed.")
-    generate_report(
-        data,
-        observations,
-        risk,
-        graph
-    )
+        else:
+            print("No rule-based red flags detected.")
 
+        # -------------------------
+        # Investigation graph
+        # -------------------------
 
-    print("\nNOTE:")
+        graph = build_graph(data)
+
+        print("\n[4] INVESTIGATION GRAPH")
+        print("-" * 30)
+
+        print(
+            "Nodes:",
+            graph.number_of_nodes()
+        )
+
+        print(
+            "Edges:",
+            graph.number_of_edges()
+        )
+
+        graph_path = (
+            f"output/{case_id}_investigation_graph.png"
+        )
+
+        visualize_graph(
+            graph,
+            graph_path
+        )
+
+        print(
+            "Graph saved:",
+            graph_path
+        )
+
+        # -------------------------
+        # Report
+        # -------------------------
+
+        generate_report(
+            data,
+            observations,
+            risk,
+            graph
+        )
+
+    print("\n" + "=" * 60)
+    print("ALL INVESTIGATIONS COMPLETED")
+    print("=" * 60)
+
     print(
-        "The risk score is a heuristic investigative indicator "
-        "and does not establish fraud or criminal activity."
+        "\nNOTE:\n"
+        "Risk scores are heuristic investigative indicators "
+        "and do not establish fraud or criminal activity."
     )
 
 

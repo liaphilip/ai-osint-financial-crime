@@ -82,7 +82,7 @@ def main():
         # Risk scoring
         # -------------------------
 
-        risk = calculate_risk(findings)
+        risk = calculate_risk(findings, observations)
 
         print("\n[2] RISK ASSESSMENT")
         print("-" * 30)

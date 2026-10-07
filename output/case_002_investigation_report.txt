@@ -4,7 +4,7 @@ AI-ASSISTED OSINT INVESTIGATION REPORT
 
 Company: National Rural Development & Recreation Mission (NRDRM)
 Domain: 
-Generated: 2026-10-07 19:12:45
+Generated: 2026-10-07 19:39:40
 
 
 1. INVESTIGATION SUMMARY
@@ -32,14 +32,18 @@ The investigation correlates publicly available OSINT findings related to the or
 
 3. RISK ASSESSMENT
 ----------------------------------------
-Risk Score: 35/100
-Risk Level: MEDIUM
+Risk Score: 90/100
+Risk Level: CRITICAL
 
 
 4. RED FLAGS
 ----------------------------------------
 - Domain appears to have been registered recently.
 - Technical infrastructure shows inconsistencies with the claimed organization.
+- Case evidence indicates possible government impersonation or false association.
+- Case evidence indicates unauthorized recruitment activity.
+- Applicants were reportedly asked to make a recruitment-related payment.
+- Official government evidence or enforcement action is associated with the case.
 
 
 5. INVESTIGATION GRAPH
